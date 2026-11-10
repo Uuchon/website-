@@ -1,6 +1,5 @@
 import { createRoot } from "react-dom/client";
 import "./setup";
-import { bootstrapGeneratedSiteAnalytics } from "./analytics.ts";
 import App from "./App.tsx";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./components/error-boundary/error-fallback";
@@ -13,7 +12,6 @@ if (!container) {
   throw new Error("Root container #root was not found.");
 }
 
-bootstrapGeneratedSiteAnalytics();
 
 createRoot(container, { onCaughtError: reportCaughtError }).render(
   <ErrorBoundary FallbackComponent={ErrorFallback}>
