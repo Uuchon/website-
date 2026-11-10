@@ -7,7 +7,7 @@ import {
   SectionHeading,
   SectionShell,
 } from "@/components/site/section";
-import { SketchStage } from "@/components/site/sketch-stage";
+
 
 const SoundVisualization = () => {
   const { t } = useTranslation();
@@ -80,16 +80,15 @@ const SoundVisualization = () => {
         ]}
       />
 
-</section>
       <SectionShell className="pt-12 md:pt-16">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <p className="label-mono">VIEW / STAGE</p>
           <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-muted-foreground/50">
-            {t("visualization.stage.pending")}
+            {t("Demo now available")}
           </p>
         </div>
 
-       <div className="mt-5">
+        <div className="mt-5">
   <iframe
     src="https://uuchon.github.io/Visualization-app-for-Education/"
     title="教育用の音の可視化アプリ"
