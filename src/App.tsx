@@ -13,13 +13,16 @@ const queryClient = new QueryClient();
 // leaves a second router listening to history. The pathless root route is the
 // shared errorElement every page bubbles up to; a page can still declare its
 // own errorElement, statically or through lazy().
-const router = createBrowserRouter([
-  {
-    errorElement: <RouteErrorBoundary />,
-    element: <SiteLayout />,
-    children: routers,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      errorElement: <RouteErrorBoundary />,
+      element: <SiteLayout />,
+      children: routers,
+    },
+  ],
+  { basename: import.meta.env.BASE_URL },
+);
 
 const App = () => {
   return (
