@@ -79,7 +79,16 @@ const SoundVisualization = () => {
           },
         ]}
       />
+<section className="mx-auto w-full max-w-7xl px-4 py-8">
+  <h2 className="mb-4 text-xl font-semibold">音の可視化を試す</h2>
 
+  <iframe
+    src="https://uuchon.github.io/Visualization-app-for-Education/"
+    title="教育用の音の可視化アプリ"
+    allow="microphone"
+    className="h-[80vh] min-h-[600px] w-full rounded-lg border-0"
+  />
+</section>
       <SectionShell className="pt-12 md:pt-16">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <p className="label-mono">VIEW / STAGE</p>
