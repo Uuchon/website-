@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "fallbackLng": "ja",
+  "languages": [
+    {
+      "code": "ja",
+      "label": "日本語",
+      "detect": ["ja", "ja-JP"],
+      "dir": "ltr"
+    },
+    {
+      "code": "en",
+      "label": "English",
+      "detect": ["en", "en-US", "en-GB"],
+      "dir": "ltr"
+    }
+  ]
+}
