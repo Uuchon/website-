@@ -1,0 +1,217 @@
+import { ArrowUpRight, CircleDashed } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
+import { PageHero } from "@/components/site/page-hero";
+import { SectionHeading, SectionShell } from "@/components/site/section";
+
+const SoundVisualization = () => {
+  const { t } = useTranslation();
+
+  const mappingRows = [
+    {
+      feature: t("visualization.mapping.row1.feature"),
+      channel: t("visualization.mapping.row1.channel"),
+      intent: t("visualization.mapping.row1.intent"),
+    },
+    {
+      feature: t("visualization.mapping.row2.feature"),
+      channel: t("visualization.mapping.row2.channel"),
+      intent: t("visualization.mapping.row2.intent"),
+    },
+    {
+      feature: t("visualization.mapping.row3.feature"),
+      channel: t("visualization.mapping.row3.channel"),
+      intent: t("visualization.mapping.row3.intent"),
+    },
+    {
+      feature: t("visualization.mapping.row4.feature"),
+      channel: t("visualization.mapping.row4.channel"),
+      intent: t("visualization.mapping.row4.intent"),
+    },
+  ];
+
+  const layers = [
+    {
+      index: "LAYER 01 / EXISTING",
+      title: t("visualization.reuse.layer1.title"),
+      description: t("visualization.reuse.layer1.desc"),
+    },
+    {
+      index: "LAYER 02 / ADAPTER",
+      title: t("visualization.reuse.layer2.title"),
+      description: t("visualization.reuse.layer2.desc"),
+    },
+    {
+      index: "LAYER 03 / SKETCH",
+      title: t("visualization.reuse.layer3.title"),
+      description: t("visualization.reuse.layer3.desc"),
+    },
+  ];
+
+  const nextSteps = [
+    t("visualization.next.item1"),
+    t("visualization.next.item2"),
+    t("visualization.next.item3"),
+  ];
+
+  return (
+    <>
+      <PageHero
+        index="01 / 06"
+        eyebrow={t("visualization.eyebrow")}
+        title={t("visualization.title")}
+        jpTitle={t("visualization.jpTitle")}
+        lead={t("visualization.lead")}
+        status="developing"
+        meta={[
+          {
+            label: t("visualization.meta.stackLabel"),
+            value: t("visualization.meta.stackValue"),
+          },
+          {
+            label: t("visualization.meta.stageLabel"),
+            value: t("visualization.meta.stageValue"),
+          },
+        ]}
+      />
+
+      <SectionShell className="pt-12 md:pt-16">
+        <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-border/60 pb-5">
+          <p className="label-mono">VIEW / STAGE</p>
+          <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-muted-foreground/50">
+            {t("Demo now available")}
+          </p>
+        </div>
+
+        <div className="mt-6 overflow-hidden border border-border/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.7),rgba(248,248,245,0.96))]">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 bg-card/20 px-5 py-3">
+            <span className="label-mono text-primary/90">SIGNAL / FIELD</span>
+            <span className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-muted-foreground/60">
+              LIVE VIEW
+            </span>
+          </div>
+          <iframe
+            src="https://uuchon.github.io/Visualization-app-for-Education/"
+            title="教育用の音の可視化アプリ"
+            allow="microphone"
+            className="h-[80vh] min-h-[600px] w-full border-0"
+          />
+        </div>
+
+        <p className="mt-5 max-w-2xl text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
+          {t("visualization.stage.caption")}
+        </p>
+      </SectionShell>
+
+      <SectionShell className="pt-0">
+        <SectionHeading
+          eyebrow={t("visualization.mapping.eyebrow")}
+          title={t("visualization.mapping.title")}
+          lead={t("visualization.mapping.lead")}
+        />
+
+        <div className="mt-10 border border-border/70 bg-card/20">
+          <div className="hidden gap-6 border-b border-border/70 bg-card/30 px-6 py-3 md:grid md:grid-cols-[1.1fr_0.8fr_1.5fr]">
+            <span className="label-mono">{t("visualization.mapping.featureHead")}</span>
+            <span className="label-mono">{t("visualization.mapping.channelHead")}</span>
+            <span className="label-mono">{t("visualization.mapping.intentHead")}</span>
+          </div>
+
+          {mappingRows.map((row, index) => (
+            <div
+              key={row.feature}
+              className="grid gap-2.5 border-b border-border/50 px-5 py-5 last:border-b-0 md:grid-cols-[1.1fr_0.8fr_1.5fr] md:items-center md:gap-6 md:px-6"
+            >
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-[9.5px] tracking-[0.2em] text-primary/60">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-[13.5px] text-foreground/90">{row.feature}</span>
+              </div>
+              <div className="pl-7 md:pl-0">
+                <span className="inline-flex border border-border/80 bg-background/80 px-2 py-1 font-mono text-[9.5px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {row.channel}
+                </span>
+              </div>
+              <p className="pl-7 text-[12.5px] leading-relaxed text-muted-foreground text-pretty md:pl-0">
+                {row.intent}
+              </p>
+            </div>
+          ))}
+        </div>
+      </SectionShell>
+
+      <section className="border-y border-border/60 bg-card/20">
+        <div className="site-container py-16 md:py-24">
+          <SectionHeading
+            eyebrow={t("visualization.reuse.eyebrow")}
+            title={t("visualization.reuse.title")}
+            lead={t("visualization.reuse.lead")}
+          />
+
+          <div className="mt-10 grid gap-4 md:mt-14 md:grid-cols-3">
+            {layers.map((layer) => (
+              <div key={layer.index} className="panel p-6 md:p-7">
+                <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-primary/60">
+                  {layer.index}
+                </p>
+                <h3 className="mt-5 font-display text-[15px] text-foreground">
+                  {layer.title}
+                </h3>
+                <p className="mt-3 text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
+                  {layer.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-4 flex items-start gap-3 border border-border/70 bg-background/50 p-5">
+            <CircleDashed
+              className="mt-0.5 h-4 w-4 shrink-0 text-primary/70"
+              strokeWidth={1.5}
+            />
+            <p className="text-[12px] leading-[1.9] text-muted-foreground text-pretty">
+              {t("visualization.reuse.note")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <SectionShell>
+        <div className="grid gap-10 md:grid-cols-[1fr_1.4fr] md:gap-16">
+          <div>
+            <p className="label-mono text-primary/90">NEXT</p>
+            <h2 className="mt-5 font-display text-[clamp(1.5rem,3vw,2rem)] font-light tracking-[-0.02em]">
+              {t("visualization.next.title")}
+            </h2>
+          </div>
+
+          <ol className="border-t border-border/60">
+            {nextSteps.map((step, index) => (
+              <li
+                key={step}
+                className="flex items-start gap-5 border-b border-border/60 py-5"
+              >
+                <span className="mt-0.5 font-mono text-[10px] tracking-[0.2em] text-muted-foreground/60">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <p className="text-[13px] leading-relaxed text-foreground/80">{step}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <Link
+          to="/rat-vocalization"
+          className="link-underline mt-12 font-mono text-[10px] uppercase tracking-[0.2em]"
+        >
+          PROJECT 02 / {t("nav.rat")}
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </Link>
+      </SectionShell>
+    </>
+  );
+};
+
+export default SoundVisualization;
