@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-    /* Deep spectral dark — the only theme this site is designed for. */
     --background: 232 42% 4%;
     --foreground: 210 32% 92%;
 
@@ -35,7 +34,6 @@
 
     --radius: 0.375rem;
 
-    /* Spectral palette used for waveform / spectrum motifs. */
     --spectrum-aqua: 184 88% 58%;
     --spectrum-blue: 224 92% 68%;
     --spectrum-violet: 266 86% 68%;
@@ -91,39 +89,26 @@
   }
 }
 
-/* ------------------------------------------------------------------
-   Gallery theme: light editorial surface used by the Home spread.
-   Tokens only — the rest of the site keeps the dark research theme
-   until the redesign is approved for the remaining pages.
-   ------------------------------------------------------------------ */
 .gallery-theme {
   color-scheme: light;
 
   --background: 60 20% 97%;
   --foreground: 222 60% 7%;
-
   --card: 60 16% 95%;
   --card-foreground: 222 60% 7%;
-
   --popover: 60 20% 98%;
   --popover-foreground: 222 60% 7%;
-
   --primary: 230 100% 57%;
   --primary-foreground: 0 0% 100%;
-
   --secondary: 60 14% 92%;
   --secondary-foreground: 222 60% 7%;
-
   --muted: 60 14% 93%;
   --muted-foreground: 222 12% 38%;
-
   --accent: 265 92% 60%;
   --accent-foreground: 0 0% 100%;
-
   --border: 222 14% 80%;
   --input: 222 14% 76%;
   --ring: 230 100% 57%;
-
   --radius: 0.25rem;
 
   --spectrum-aqua: 190 92% 44%;
@@ -143,12 +128,12 @@
   );
 }
 
-.gallery-theme body {
+.gallery-theme body,
+.gallery-theme {
   background-color: hsl(var(--background));
-  background-image: none;
+  color: hsl(var(--foreground));
 }
 
-/* Dark inset used inside the light spread. */
 .theme-ink {
   color-scheme: dark;
 
@@ -166,10 +151,8 @@
   --spectrum-lime: 73 92% 60%;
 }
 
-/* Lime colour-block figure. */
 .theme-lime {
   color-scheme: light;
-
   --background: 73 90% 60%;
   --foreground: 222 60% 7%;
   --card: 73 88% 66%;

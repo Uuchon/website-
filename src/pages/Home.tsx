@@ -148,11 +148,8 @@ const Home = () => {
   ];
 
   return (
-    <>
-      {/* ---------------------------------------------------------------- */}
-      {/* HERO / PLATE 01                                                   */}
-      {/* ---------------------------------------------------------------- */}
-      <section className="relative overflow-hidden border-b border-foreground/20">
+    <div className="gallery-theme bg-background text-foreground">
+      <section className="relative overflow-hidden border-b border-foreground/20 bg-[radial-gradient(circle_at_top,_rgba(87,124,255,0.18),_transparent_30%),radial-gradient(circle_at_right,_rgba(146,94,255,0.16),_transparent_28%),linear-gradient(180deg,#f8f8f5_0%,#f4f5f2_100%)]">
         <div
           aria-hidden="true"
           className="editorial-grid pointer-events-none absolute inset-0 opacity-80"
@@ -172,9 +169,12 @@ const Home = () => {
             <span className="label-mono">VOL. 01 / 2026</span>
           </div>
 
-          <div className="grid gap-x-6 gap-y-8 pt-10 md:grid-cols-12 md:items-end md:pt-14">
-            <div className="md:col-span-8">
-              <h1 className="font-display text-[clamp(3rem,9.6vw,7.4rem)] font-semibold uppercase leading-[0.84] tracking-[-0.055em]">
+          <div className="grid gap-x-6 gap-y-8 pt-10 md:grid-cols-12 md:items-end md:pt-16">
+            <div className="md:col-span-7">
+              <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.28em] text-foreground/60">
+                Experimental record / acoustic translation
+              </p>
+              <h1 className="font-display text-[clamp(3.2rem,9.5vw,8rem)] font-semibold uppercase leading-[0.78] tracking-[-0.055em] text-foreground">
                 <span className="block">Sound</span>
                 <span className="block">Beyond</span>
                 <span className="block text-primary">
@@ -186,18 +186,18 @@ const Home = () => {
               </h1>
             </div>
 
-            <div className="pb-1 md:col-span-4">
-              <p className="text-[14px] tracking-[0.02em] text-foreground">
+            <div className="pb-1 md:col-span-5">
+              <p className="text-[13px] tracking-[0.05em] text-foreground/80">
                 {t("home.hero.kicker")}
               </p>
-              <p className="mt-4 text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
+              <p className="mt-4 max-w-md text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
                 {t("home.hero.lead")}
               </p>
 
               <div className="mt-7 flex flex-wrap gap-2.5">
                 <Button
                   asChild
-                  className="h-10 gap-2.5 rounded-none px-5 font-mono text-[10px] uppercase tracking-[0.16em]"
+                  className="h-10 gap-2.5 rounded-none border-foreground/20 bg-foreground px-5 font-mono text-[10px] uppercase tracking-[0.16em] text-background hover:bg-foreground/90"
                 >
                   <a href="#features">
                     {t("home.hero.ctaPrimary")}
@@ -207,7 +207,7 @@ const Home = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="h-10 gap-2.5 rounded-none border-foreground/30 bg-transparent px-5 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground hover:bg-foreground hover:text-background"
+                  className="h-10 gap-2.5 rounded-none border-foreground/25 bg-transparent px-5 font-mono text-[10px] uppercase tracking-[0.16em] text-foreground hover:bg-foreground hover:text-background"
                 >
                   <Link to="/about">
                     {t("home.hero.ctaSecondary")}
@@ -218,7 +218,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* speculative field plate */}
           <div className="mt-12 border-t border-foreground/20 pt-8 md:mt-16 md:pt-10">
             <div className="flex flex-wrap items-center justify-between gap-3 pb-6">
               <span className="label-mono text-foreground/70">
@@ -265,7 +264,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ticker ------------------------------------------------------------ */}
       <div className="border-b border-foreground/20 bg-foreground/[0.025]">
         <div className="site-container flex items-center gap-4 py-3">
           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-spectrum-lime" />
@@ -275,9 +273,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* FEATURES                                                          */}
-      {/* ---------------------------------------------------------------- */}
       <section id="features" className="site-container py-16 md:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6 border-b border-foreground/25 pb-6">
           <div>
@@ -352,9 +347,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* METHOD / DARK INSET                                               */}
-      {/* ---------------------------------------------------------------- */}
       <section className="theme-ink border-y border-foreground/20 bg-background text-foreground">
         <div className="site-container py-16 md:py-24">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-foreground/20 pb-4">
@@ -395,9 +387,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* NOTES / CURRENT WORK                                              */}
-      {/* ---------------------------------------------------------------- */}
       <section className="border-b border-foreground/20">
         <div className="site-container py-16 md:py-24">
           <div className="grid gap-10 md:grid-cols-12 md:gap-12">
@@ -463,9 +452,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* RECORD / PUBLICATIONS                                             */}
-      {/* ---------------------------------------------------------------- */}
       <section className="border-b border-foreground/20">
         <div className="site-container py-14 md:py-20">
           <div className="grid gap-10 md:grid-cols-12 md:items-start md:gap-12">
@@ -509,9 +495,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* CLOSING / ABOUT                                                   */}
-      {/* ---------------------------------------------------------------- */}
       <section className="relative overflow-hidden">
         <div className="site-container py-16 md:py-24">
           <Link to="/about" className="group grid gap-8 md:grid-cols-12 md:items-end">
@@ -545,7 +528,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
