@@ -89,9 +89,14 @@ const SoundVisualization = () => {
           </p>
         </div>
 
-        <div className="mt-5">
-          <SketchStage />
-        </div>
+       <div className="mt-5">
+  <iframe
+    src="https://uuchon.github.io/Visualization-app-for-Education/"
+    title="教育用の音の可視化アプリ"
+    allow="microphone"
+    className="h-[80vh] min-h-[600px] w-full rounded-lg border-0"
+  />
+</div>
 
         <p className="mt-5 max-w-2xl text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
           {t("visualization.stage.caption")}
