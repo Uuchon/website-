@@ -1,0 +1,425 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep spectral dark — the only theme this site is designed for. */
+    --background: 232 42% 4%;
+    --foreground: 210 32% 92%;
+
+    --card: 231 34% 7%;
+    --card-foreground: 210 32% 92%;
+
+    --popover: 231 38% 6%;
+    --popover-foreground: 210 32% 92%;
+
+    --primary: 186 92% 56%;
+    --primary-foreground: 232 46% 5%;
+
+    --secondary: 230 22% 13%;
+    --secondary-foreground: 210 28% 90%;
+
+    --muted: 230 20% 11%;
+    --muted-foreground: 218 14% 64%;
+
+    --accent: 266 80% 68%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 226 20% 16%;
+    --input: 226 20% 19%;
+    --ring: 186 92% 56%;
+
+    --radius: 0.375rem;
+
+    /* Spectral palette used for waveform / spectrum motifs. */
+    --spectrum-aqua: 184 88% 58%;
+    --spectrum-blue: 224 92% 68%;
+    --spectrum-violet: 266 86% 68%;
+    --spectrum-magenta: 316 88% 66%;
+    --spectrum-amber: 38 96% 62%;
+    --spectrum-lime: 74 92% 58%;
+
+    --gradient-spectral: linear-gradient(
+      100deg,
+      hsl(var(--spectrum-aqua)) 0%,
+      hsl(var(--spectrum-blue)) 30%,
+      hsl(var(--spectrum-violet)) 55%,
+      hsl(var(--spectrum-magenta)) 78%,
+      hsl(var(--spectrum-amber)) 100%
+    );
+    --gradient-panel: linear-gradient(
+      160deg,
+      hsl(231 34% 9% / 0.9) 0%,
+      hsl(232 42% 5% / 0.9) 100%
+    );
+    --shadow-elegant: 0 30px 80px -45px hsl(var(--spectrum-blue) / 0.55);
+
+    --sidebar-background: 231 34% 7%;
+    --sidebar-foreground: 210 32% 92%;
+    --sidebar-primary: 186 92% 56%;
+    --sidebar-primary-foreground: 232 46% 5%;
+    --sidebar-accent: 230 22% 13%;
+    --sidebar-accent-foreground: 210 32% 92%;
+    --sidebar-border: 226 20% 16%;
+    --sidebar-ring: 186 92% 56%;
+  }
+
+  .dark {
+    --background: 232 42% 4%;
+    --foreground: 210 32% 92%;
+    --card: 231 34% 7%;
+    --card-foreground: 210 32% 92%;
+    --popover: 231 38% 6%;
+    --popover-foreground: 210 32% 92%;
+    --primary: 186 92% 56%;
+    --primary-foreground: 232 46% 5%;
+    --secondary: 230 22% 13%;
+    --secondary-foreground: 210 28% 90%;
+    --muted: 230 20% 11%;
+    --muted-foreground: 218 14% 64%;
+    --accent: 266 80% 68%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 226 20% 16%;
+    --input: 226 20% 19%;
+    --ring: 186 92% 56%;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Gallery theme: light editorial surface used by the Home spread.
+   Tokens only — the rest of the site keeps the dark research theme
+   until the redesign is approved for the remaining pages.
+   ------------------------------------------------------------------ */
+.gallery-theme {
+  color-scheme: light;
+
+  --background: 60 20% 97%;
+  --foreground: 222 60% 7%;
+
+  --card: 60 16% 95%;
+  --card-foreground: 222 60% 7%;
+
+  --popover: 60 20% 98%;
+  --popover-foreground: 222 60% 7%;
+
+  --primary: 230 100% 57%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 60 14% 92%;
+  --secondary-foreground: 222 60% 7%;
+
+  --muted: 60 14% 93%;
+  --muted-foreground: 222 12% 38%;
+
+  --accent: 265 92% 60%;
+  --accent-foreground: 0 0% 100%;
+
+  --border: 222 14% 80%;
+  --input: 222 14% 76%;
+  --ring: 230 100% 57%;
+
+  --radius: 0.25rem;
+
+  --spectrum-aqua: 190 92% 44%;
+  --spectrum-blue: 230 100% 57%;
+  --spectrum-violet: 265 92% 60%;
+  --spectrum-magenta: 322 92% 56%;
+  --spectrum-amber: 42 96% 50%;
+  --spectrum-lime: 73 92% 56%;
+
+  --gradient-spectral: linear-gradient(
+    100deg,
+    hsl(var(--spectrum-aqua)) 0%,
+    hsl(var(--spectrum-blue)) 26%,
+    hsl(var(--spectrum-violet)) 52%,
+    hsl(var(--spectrum-magenta)) 76%,
+    hsl(var(--spectrum-lime)) 100%
+  );
+}
+
+.gallery-theme body {
+  background-color: hsl(var(--background));
+  background-image: none;
+}
+
+/* Dark inset used inside the light spread. */
+.theme-ink {
+  color-scheme: dark;
+
+  --background: 222 58% 8%;
+  --foreground: 60 25% 96%;
+  --card: 222 50% 11%;
+  --card-foreground: 60 25% 96%;
+  --muted: 222 40% 14%;
+  --muted-foreground: 220 14% 68%;
+  --border: 220 22% 26%;
+  --primary: 73 92% 60%;
+  --primary-foreground: 222 58% 8%;
+  --accent: 230 100% 66%;
+  --accent-foreground: 0 0% 100%;
+  --spectrum-lime: 73 92% 60%;
+}
+
+/* Lime colour-block figure. */
+.theme-lime {
+  color-scheme: light;
+
+  --background: 73 90% 60%;
+  --foreground: 222 60% 7%;
+  --card: 73 88% 66%;
+  --card-foreground: 222 60% 7%;
+  --muted: 73 70% 54%;
+  --muted-foreground: 222 30% 24%;
+  --border: 222 40% 18%;
+  --primary: 222 60% 7%;
+  --primary-foreground: 73 90% 60%;
+  --spectrum-aqua: 222 60% 7%;
+  --spectrum-blue: 230 100% 42%;
+  --spectrum-violet: 265 85% 36%;
+  --spectrum-magenta: 322 85% 38%;
+  --spectrum-amber: 42 90% 34%;
+  --spectrum-lime: 222 60% 7%;
+  --gradient-spectral: linear-gradient(
+    100deg,
+    hsl(222 60% 7%),
+    hsl(230 90% 38%) 48%,
+    hsl(265 80% 34%) 100%
+  );
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "palt" 1;
+    background-image:
+      radial-gradient(70% 50% at 82% -8%, hsl(var(--spectrum-blue) / 0.14), transparent 70%),
+      radial-gradient(50% 40% at 4% 2%, hsl(var(--spectrum-violet) / 0.1), transparent 70%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.28);
+    color: hsl(var(--foreground));
+  }
+
+  :focus-visible {
+    outline: 1px solid hsl(var(--primary) / 0.8);
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(226 18% 24%);
+  }
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .label-mono {
+    @apply font-mono text-[10px] font-normal uppercase leading-none tracking-[0.3em] text-muted-foreground;
+  }
+
+  .spectral-text {
+    background: var(--gradient-spectral);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .spectral-rule {
+    background: var(--gradient-spectral);
+  }
+
+  .bg-spectral {
+    background-image: var(--gradient-spectral);
+  }
+
+  .panel {
+    @apply relative rounded-sm border border-border/80 bg-card/60 backdrop-blur-[2px];
+    background-image: var(--gradient-panel);
+  }
+
+  .panel-hover {
+    @apply transition-colors duration-300;
+  }
+  .panel-hover:hover {
+    @apply border-border;
+    background-color: hsl(var(--card) / 0.9);
+  }
+
+  .grid-veil {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 88px 88px;
+    mask-image: radial-gradient(85% 70% at 50% 30%, black 20%, transparent 82%);
+  }
+
+  .editorial-grid {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--foreground) / 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 8.333333% 100%;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-2 text-sm text-foreground/80 transition-colors;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--gradient-spectral);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-underline:hover {
+    @apply text-foreground;
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-fade-up-slow {
+    animation: fade-up 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+
+  .animate-sweep {
+    background-size: 220% 100%;
+    animation: sweep 14s linear infinite;
+  }
+
+  .animate-drift {
+    animation: drift 22s ease-in-out infinite alternate;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sweep {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(0, -2.5%, 0) scale(1.04);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+  }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 0 5px hsl(var(--primary) / 0);
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2.8s ease-in-out infinite;
+}
+
+.plate-orbit {
+  animation: plate-spin 140s linear infinite;
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+}
+
+@keyframes plate-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up,
+  .animate-fade-up-slow,
+  .animate-sweep,
+  .animate-drift,
+  .animate-pulse-dot,
+  .plate-orbit {
+    animation: none !important;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
