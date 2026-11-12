@@ -137,8 +137,8 @@ const RatVocalization = () => {
         </p>
         <div className="mt-8 overflow-hidden border border-border/70 bg-card/20">
           <iframe
-            src="https://uuchon.github.io/Rat-USV-Monitor/"
-            title="ラット超音波モニタ"
+            src="https://uuchon.github.io/Rat-monitoring-app/"
+            title="ラット超音波モニタリングツール"
             allow="microphone; fullscreen"
             allowFullScreen
             loading="lazy"
