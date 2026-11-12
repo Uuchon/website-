@@ -146,7 +146,7 @@ const RatVocalization = () => {
           />
         </div>
         <a
-          href="https://uuchon.github.io/Rat-USV-Monitor/"
+          href="https://uuchon.github.io/Rat-monitoring-app/"
           target="_blank"
           rel="noreferrer"
           className="link-underline mt-6 font-mono text-[10px] uppercase tracking-[0.2em]"
