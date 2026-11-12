@@ -80,7 +80,7 @@ const SoundVisualization = () => {
         ]}
       />
 
-      <SectionShell className="pt-12 md:pt-16">
+          <SectionShell className="pt-12 md:pt-16">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
           <p className="label-mono">VIEW / STAGE</p>
           <p className="font-mono text-[9.5px] uppercase tracking-[0.2em] text-muted-foreground/50">
@@ -89,16 +89,16 @@ const SoundVisualization = () => {
         </div>
 
         <div className="mt-5">
+          <iframe
+            src="https://uuchon.github.io/Visualization-app-for-Education/?embed=1"
+            title="WAVE LAB 教育用ツール"
+            allow="microphone; fullscreen"
+            allowFullScreen
+            loading="lazy"
+            className="h-[85vh] min-h-[640px] w-full rounded-[var(--radius)] border border-border bg-background"
+          />
+        </div>
 
-<!-- サイトの「音の可視化」ページ(React)の iframe を、これに置き換えます -->
-<iframe
-  src="https://uuchon.github.io/Visualization-app-for-Education/?embed=1"
-  title="WAVE LAB 教育用ツール"
-  allow="microphone; fullscreen"
-  allowfullscreen
-  loading="lazy"
-  class="h-[85vh] min-h-[640px] w-full rounded-[var(--radius)] border border-border bg-background"
-></iframe>
         <p className="mt-5 max-w-2xl text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
           {t("visualization.stage.caption")}
         </p>
