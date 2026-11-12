@@ -130,7 +130,31 @@ const RatVocalization = () => {
           </ol>
         </div>
       </SectionShell>
-
+      <SectionShell>
+        <SectionHeading eyebrow="PROTOTYPE" title="リアルタイム・モニタ（試作）" />
+        <p className="mt-6 max-w-2xl text-[12.5px] leading-[1.95] text-muted-foreground text-pretty">
+          ラットの超音波を色で表示する試作ツールです。超音波マイクと高サンプリング（192 kHz以上）の入力が必要です。
+        </p>
+        <div className="mt-8 overflow-hidden border border-border/70 bg-card/20">
+          <iframe
+            src="https://uuchon.github.io/Rat-USV-Monitor/"
+            title="ラット超音波モニタ"
+            allow="microphone; fullscreen"
+            allowFullScreen
+            loading="lazy"
+            style={{ width: "100%", height: "1500px", border: 0 }}
+          />
+        </div>
+        <a
+          href="https://uuchon.github.io/Rat-USV-Monitor/"
+          target="_blank"
+          rel="noreferrer"
+          className="link-underline mt-6 font-mono text-[10px] uppercase tracking-[0.2em]"
+        >
+          OPEN IN NEW TAB
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </a>
+      </SectionShell>
       <SectionShell className="pt-0">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="panel p-7 md:p-9">
