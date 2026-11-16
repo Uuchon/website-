@@ -90,7 +90,7 @@ const SoundVisualization = () => {
 
         <div className="mt-5">
           <iframe
-            src="https://uuchon.github.io/Visualization-app-for-Education/?embed=1"
+            src="https://uuchon.github.io/Visualization-app-for-analyze/?embed=1"
             title="WAVE LAB 教育用ツール"
             allow="microphone; fullscreen"
             allowFullScreen
